@@ -88,6 +88,13 @@ docker compose down
 <img src="screnshots/arquitectura.png" width="400"/>
 
 
+## ☁️ Arquitectura Cloud
+
+La aplicación está diseñada para desplegarse en AWS utilizando buenas prácticas de seguridad y escalabilidad.
+
+<img src="screnshots/Smart Task Manager Cloud AWS.png" width="600"/>
+
+
 ### 📸 Capturas
 
 ### Vista principal
