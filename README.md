@@ -50,14 +50,14 @@ Permite crear, editar, eliminar y marcar tareas como completadas, con una interf
 
 Desde la raíz del proyecto:
 
-```bash
+bash
 npm install
 node src/app.js
 
-Servidor disponible en:
+### Servidor disponible en:
 http://localhost:3000
 
-Frontend
+### 🌐 Frontend
 cd frontend
 npm install
 npm run dev
