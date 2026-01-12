@@ -85,7 +85,8 @@ docker compose down
 
 ### 🏗️ Arquitectura
 
-![](screnshots/arquitectura.png.png)
+<img src="screnshots/arquitectura.png" width="700"/>
+
 
 ### 📸 Capturas
 
