@@ -90,7 +90,57 @@ docker compose down
 
 ## ☁️ Arquitectura Cloud
 
-La aplicación está diseñada para desplegarse en AWS utilizando buenas prácticas de seguridad y escalabilidad.
+Este proyecto está diseñado para ser desplegado en AWS siguiendo buenas prácticas de seguridad, escalabilidad y aislamiento de red.
+
+La arquitectura separa claramente las capas públicas y privadas, evitando exposición directa de los servicios internos y permitiendo escalar la solución en el futuro.
+
+## 🔐 Componentes principales
+
+VPC: Red privada que aísla la infraestructura del entorno público.
+
+Public Subnet: Contiene el Application Load Balancer (ALB), encargado de recibir el tráfico externo.
+
+Private Subnet: Aloja la instancia EC2 donde se ejecuta la aplicación.
+
+Application Load Balancer (ALB):
+
+Recibe tráfico HTTPS (443) desde Internet.
+
+Distribuye las peticiones hacia la capa privada.
+
+EC2 Instance:
+
+Ejecuta Docker Compose.
+
+Contiene los servicios:
+
+Nginx como reverse proxy.
+
+Frontend React.
+
+Backend Node.js + Express.
+
+Base de datos SQLite.
+
+Security Groups:
+
+Permiten únicamente tráfico HTTPS público hacia el ALB.
+
+Permiten tráfico interno controlado hacia la instancia EC2.
+
+SSL Encryption:
+
+Garantiza comunicación segura entre el cliente y el sistema.
+
+Para simplicidad del proyecto se utiliza SQLite embebido. En un entorno productivo se recomienda utilizar una base de datos administrada como Amazon RDS.
+
+## 🔄 Flujo de tráfico
+
+Usuario → Internet → ALB (HTTPS 443) → EC2 (HTTP 80) → Nginx → Aplicación
+
+
+
+
 
 <img src="screnshots/Smart Task Manager Cloud AWS.png" width="600"/>
 
