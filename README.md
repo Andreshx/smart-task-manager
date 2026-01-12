@@ -46,7 +46,7 @@ Permite crear, editar, eliminar y marcar tareas como completadas, con una interf
 
 ---
 
-### Backend
+### ⚙️Backend
 
 Desde la raíz del proyecto:
 
@@ -64,7 +64,7 @@ npm run dev
 Aplicación disponible en:
 http://localhost:5173
 
-🐳 Ejecutar con Docker
+### 🐳 Ejecutar con Docker
 
 Requisitos
 
@@ -74,16 +74,16 @@ Desde la raíz del proyecto:
 
 docker compose up --build
 
-Frontend: 
+### Frontend: 
 http://localhost:5173
 
-Backend (health check):
+### Backend (health check):
 http://localhost:3000/health
 
-Para detener los contenedores:
+## Para detener los contenedores:
 docker compose down 
 
-🏗️ Arquitectura
+### 🏗️ Arquitectura
 
 ┌─────────────┐      HTTP       ┌─────────────┐      SQL      ┌─────────────┐
 │   Frontend  │  ───────────▶  │   Backend   │  ───────────▶│   SQLite    │
@@ -92,7 +92,7 @@ docker compose down
         │
         └──────────── Docker Compose ─────────────┘
 
-📸 Capturas
+### 📸 Capturas
 
 ### Vista principal
 ![Vista principal](screnshots/SmartTaskManager.png)
@@ -115,12 +115,13 @@ docker compose down
 
 
 
-👨‍💻 Autor
+### 👨‍💻 Autor
 
 Andrés Espinosa
 Software Developer
 Ecuador 🇪🇨
 
-📄 Licencia
+### 📄 Licencia
 
 MIT License
+ask-manager
