@@ -99,13 +99,13 @@ La arquitectura separa claramente las capas públicas y privadas, evitando expos
 ## 🔐 Componentes principales
 
 ## VPC: 
-    Red privada que aísla la infraestructura del entorno público.
+Red privada que aísla la infraestructura del entorno público.
 
 ## Public Subnet: 
-    Contiene el Application Load Balancer (ALB), encargado de recibir el tráfico externo.
+Contiene el Application Load Balancer (ALB), encargado de recibir el tráfico externo.
 
 ## Private Subnet: 
-    Aloja la instancia EC2 donde se ejecuta la aplicación.
+Aloja la instancia EC2 donde se ejecuta la aplicación.
 
 ## Application Load Balancer (ALB):
 
