@@ -1,0 +1,235 @@
+:root {
+  --bg: #0b1220;
+  --card: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.12);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.68);
+  --danger: #ff4d4d;
+  --primary: #6ea8fe;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --radius: 14px;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 600px at 20% -10%, rgba(110, 168, 254, 0.22), transparent),
+              radial-gradient(900px 500px at 90% 10%, rgba(255, 77, 77, 0.12), transparent),
+              var(--bg);
+  color: var(--text);
+}
+
+a { color: var(--primary); }
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 18px 48px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0.2px;
+}
+
+.sub {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.badge {
+  font-size: 12px;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: rgba(0,0,0,0.15);
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  color: rgba(255,255,255,0.88);
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  flex: 1;
+  min-width: 240px;
+}
+
+label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+input, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.20);
+  color: var(--text);
+  padding: 10px 12px;
+  outline: none;
+}
+
+textarea { resize: vertical; }
+
+input:focus, textarea:focus {
+  border-color: rgba(110, 168, 254, 0.55);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+button {
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.18);
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease, border 120ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.08);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btnPrimary {
+  border-color: rgba(110, 168, 254, 0.45);
+  background: rgba(110, 168, 254, 0.16);
+}
+
+.btnDanger {
+  border-color: rgba(255, 77, 77, 0.45);
+  background: rgba(255, 77, 77, 0.12);
+}
+
+.alert {
+  border: 1px solid rgba(255, 77, 77, 0.35);
+  background: rgba(255, 77, 77, 0.12);
+  padding: 12px 14px;
+  border-radius: 12px;
+  color: rgba(255,255,255,0.92);
+}
+
+.listHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.smallMuted {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.taskItem {
+  display: grid;
+  gap: 10px;
+}
+
+.taskTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.taskTitle {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.titleText {
+  font-weight: 650;
+  font-size: 16px;
+}
+
+.descText {
+  margin-top: 6px;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.35;
+}
+
+.completed .titleText {
+  text-decoration: line-through;
+  opacity: 0.75;
+}
+
+.completed .descText {
+  opacity: 0.6;
+}
+
+.hr {
+  height: 1px;
+  background: rgba(255,255,255,0.10);
+  margin: 8px 0 0;
+}
+
+.taskHeaderRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.taskCheck {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+}
+
+.taskHeaderText {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}

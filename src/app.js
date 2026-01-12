@@ -1,12 +1,23 @@
 import express from 'express';
 import cors from 'cors';
+import "./db/database.js";
+import taskRoutes from './routes/taskRoutes.js';
+
+
+
 
 const app = express();
+
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
+// Routes
+app.use('/tasks', taskRoutes);
+
+
+// Health Check Endpoint
 app.get("/health", (req, res) => {
   res.json({ status: "OK", message: "Smart Task Manager API is running" });
 });
